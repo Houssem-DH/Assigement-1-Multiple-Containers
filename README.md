@@ -22,25 +22,25 @@ If they are used, we need to determinate them
 ➤ Start nginx on port 80:80 :
 
 ```bash
-docker run -d --name mynginx -p 80:80 nginx:latest
+sudo docker run -d --name mynginx -p 80:80 nginx:latest
 ```
 
 ➤ Start apache server on port 8080:80 :
 
 ```bash
-docker run -d --name myapache -p 8080:80 httpd:latest
+sudo docker run -d --name myapache -p 8080:80 httpd:latest
 ```
 
 ➤ Start mysql on port 3306:3306 :
 
 ```bash
-docker run -d --name mymysql -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
+sudo docker run -d --name mymysql -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 ```
 
 Now we use the following command to get the random root password for the MySQL container :
 
 ```bash
-docker container logs mymysql
+sudo docker container logs mymysql
 ```
 
 We should see output like this:
@@ -55,5 +55,5 @@ We should see output like this:
 Once we have confirmed that we have the root password, we can clean up all the containers using the following command:
 
 ```bash
-docker container rm -f mynginx myapache mymysql
+sudo docker container rm -f mynginx myapache mymysql
 ```
