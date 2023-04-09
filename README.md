@@ -45,7 +45,11 @@ docker container logs mymysql
 
 We should see output like this:
 
-![image info](./img/MysqlLogs.png)
+```bash
+[Entrypoint] GENERATED ROOT PASSWORD: xxxxxxxx
+```
+
+
 
 
 Once we have confirmed that we have the root password, we can clean up all the containers using the following command:
